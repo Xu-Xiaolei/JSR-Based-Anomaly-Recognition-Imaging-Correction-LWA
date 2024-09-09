@@ -7,12 +7,12 @@ X = X(2000:end,1:N_PZT);
 M = size(X,2);                      % 传感器通道数
 N = size(X,1);                      % 信号长度
 P = round(0.2*N);                   % 压缩后的观测信号长度
-lambda_c = 5;                     % 共同支撑集稀疏惩罚系数
-lambda_i = 1;                     % 个体支撑集稀疏惩罚系数
-beta_c0 = 1e-6;                     % 共同支撑集学习率
-beta_i0 = 1e-6;                     % 个体支撑集学习率
-epsilon = 1;                       % 收敛阈值
-%% 拉平幅值
+lambda_c = ...;                     % 共同支撑集稀疏惩罚系数
+lambda_i = ...;                     % 个体支撑集稀疏惩罚系数
+beta_c0 = ...;                     % 共同支撑集学习率
+beta_i0 = ...;                     % 个体支撑集学习率
+epsilon = ...;                       % 收敛阈值
+
 for i=1:size(X,2)
     X(:,i)=X(:,i)-mean(X(:,i));
 end
