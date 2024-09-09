@@ -1,7 +1,7 @@
 %% 基于联合稀疏模型（JSM）的多通道PZT传感器异常识别与成像矫正
 clc;clear all;close all;
 %% 参数初始化
-N_PZT = 8;                         % 阵元数量
+N_PZT = ...;                         % 阵元数量
 X = load('intact_data.mat').Data;      % 原始信号
 X = X(2000:end,1:N_PZT);
 M = size(X,2);                      % 传感器通道数
